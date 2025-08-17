@@ -1,7 +1,13 @@
-n = int(input("Digite um número: "))
+
+import random
+import math
+
+n = int(input("Digite o valor de n: "))
 soma = 0
 
-for i in range(1, n + 1):
-    soma += i
+for _ in range(n):
+    valor = random.randint(0, 100)  # número aleatório entre 0 e 100
+    soma += valor
 
-print(f"A soma dos números de 1 a {n} é {soma}")
+raiz = math.sqrt(soma)
+print(f"A soma foi {soma} e a raiz quadrada é {raiz:.2f}")

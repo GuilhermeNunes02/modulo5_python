@@ -1,9 +1,15 @@
-total = 0
 
-print("Digite 10 números positivos:")
-for i in range(10):
-    num = int(input())
-    total += num
+import random
 
-media = total / 10
-print(f"A média dos valores digitados é {media:.2f}")
+numero_secreto = random.randint(1, 10)
+
+while True:
+    palpite = int(input("Adivinhe o número entre 1 e 10: "))
+    
+    if palpite > numero_secreto:
+        print("Muito alto, tente novamente!")
+    elif palpite < numero_secreto:
+        print("Muito baixo, tente novamente!")
+    else:
+        print(f"Correto! O número é {numero_secreto}.")
+        break
